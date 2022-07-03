@@ -21,3 +21,7 @@ Note: The file format is guaranteed to remain the same.
       Remember "dimensions = loops". 
       So, a 2-dimensional array will require 2 loops to completely iterate over all of the elements in the array.
     • Don't use magic numbers. Instead use global constants at the top of the program under the includes.
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+Added new bowler, "IssaHabeeb," and added fifth score to each bowler.
