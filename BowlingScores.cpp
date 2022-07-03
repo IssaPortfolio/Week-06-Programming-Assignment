@@ -34,8 +34,8 @@
 using namespace std;
 
 // CONSTANT VARIABLES
-const int NUM_OF_BOWLERS = 10;
-const int NUM_OF_SCORES = 4;
+const int NUM_OF_BOWLERS = 11;
+const int NUM_OF_SCORES = 5;
 
 
 // To read and store data into two arrays. The function should take as input parameters the file name and both empty arrays
@@ -60,16 +60,17 @@ bool GetBowlingData(string INPUTFILENAME, string bowler_names[], int bowler_scor
     int get_score2;
     int get_score3;
     int get_score4;
+    int get_score5;
 
     // One dimension array
     for (int row = 0; row < NUM_OF_BOWLERS; row++)
     { 
         // Gets data
-        InputStream >> get_name >> get_score1 >> get_score2 >> get_score3 >> get_score4;
+        InputStream >> get_name >> get_score1 >> get_score2 >> get_score3 >> get_score4 >> get_score5;
         // Sstores names based off index
         bowler_names[row] += get_name;
 
-        enum scores {FIRST_SCORE, SECOND_SCORE, THIRD_SCORE, FOURTH_SCORE};
+        enum scores {FIRST_SCORE, SECOND_SCORE, THIRD_SCORE, FOURTH_SCORE, FIFTH_SCORE};
 
         // Two dimension array
         for (int column = 0; column < NUM_OF_SCORES; column++)
@@ -88,6 +89,9 @@ bool GetBowlingData(string INPUTFILENAME, string bowler_names[], int bowler_scor
                 break;
             case FOURTH_SCORE:
                 bowler_scores[row][column] = get_score4;
+                break;
+            case FIFTH_SCORE:
+                bowler_scores[row][column] = get_score5;
                 break;
             }
         }
