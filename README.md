@@ -20,7 +20,8 @@ Note: The file format is guaranteed to remain the same.
     • Don't use Vectors or any other newfangled container, use only old school C arrays like in the book.
     • Use repetition structures (loops) in your functions to perform calculations and printing. 
       Remember "dimensions = loops". 
-      So, a 2-dimensional array will require 2 loops to completely iterate over all of the elements in the array.
+      So, a 2-dimensional array will require 2 loops to completely iterate over all of the elements 
+      in the array.
     • Don't use magic numbers. Instead use global constants at the top of the program under the includes.
 
 --------------------------------------------------------------------------------------------------------------------------------------
