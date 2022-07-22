@@ -31,6 +31,7 @@
 #include <iostream>   // GIVES "cin" AND "cout"
 #include <fstream>    // INPUTS/OUTPUTS TO A FILE
 #include <iomanip>    // GIVES "setfill(char)", "setw(int)" AND "setprecision(int)"
+#include <string>     // GIVES "string" DATA TYPE
 using namespace std;
 
 // CONSTANT VARIABLES
@@ -52,7 +53,7 @@ bool GetBowlingData(string INPUTFILENAME, string bowler_names[], int bowler_scor
         return false;
     }
     else
-        cout << "Loading file: '" << INPUTFILENAME << "'...\n\n" << endl; 
+        cout << "Loading file: '" << INPUTFILENAME << "'...\n\n" << endl;
 
     // Variables to store into
     string get_name;
@@ -64,13 +65,13 @@ bool GetBowlingData(string INPUTFILENAME, string bowler_names[], int bowler_scor
 
     // One dimension array
     for (int row = 0; row < NUM_OF_BOWLERS; row++)
-    { 
+    {
         // Gets data
         InputStream >> get_name >> get_score1 >> get_score2 >> get_score3 >> get_score4 >> get_score5;
         // Sstores names based off index
         bowler_names[row] += get_name;
 
-        enum scores {FIRST_SCORE, SECOND_SCORE, THIRD_SCORE, FOURTH_SCORE, FIFTH_SCORE};
+        enum scores { FIRST_SCORE, SECOND_SCORE, THIRD_SCORE, FOURTH_SCORE, FIFTH_SCORE };
 
         // Two dimension array
         for (int column = 0; column < NUM_OF_SCORES; column++)
@@ -169,13 +170,11 @@ int main()
 
 
 /*
-
     while (InputStream >> get_name >> get_score1 >> get_score2 >> get_score3 >> get_score4)
     {
         cout << get_name << " " << get_score1 << " " << get_score2 << " " << get_score3 << " " << get_score4 << endl;
         bowler_names[index] += get_name;
         index++;
-
         for (int i = 0; i < NUM_OF_BOWLERS; i++)
             for (int j = 0; j < NUM_OF_SCORES; j++)
             {
@@ -194,16 +193,12 @@ int main()
                 bowler_scores[i][j] += get_score4;
                 break;
                 }
-
                 cout << bowler_scores[i][j] << endl;
             }
     }
-
     ^old broken code
-
-    I was really struggling at this assignment because I had a lot of trouble passing in arguments for function parameters. 
+    I was really struggling at this assignment because I had a lot of trouble passing in arguments for function parameters.
     The reason for that was due to the debugger confusing me. When I debugged my code with parameters I couldn't really see
-    all the values in my arrays/lists from Autos but I think it has to do with it being a pointer or something. 
-    Without parameters and arguments I could easily see the values more clearly in Autos. 
-
+    all the values in my arrays/lists from Autos but I think it has to do with it being a pointer or something.
+    Without parameters and arguments I could easily see the values more clearly in Autos.
 */
